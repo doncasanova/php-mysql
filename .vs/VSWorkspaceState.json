@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\public\\data"
+    "\\public\\css",
+    "\\public\\data",
+    "\\public\\templates"
   ],
-  "SelectedNode": "\\common.php",
+  "SelectedNode": "\\public\\read.php",
   "PreviewInSolutionExplorer": false
 }
