@@ -14,13 +14,13 @@ if (isset($_POST['submit'])) {
     $connection = new PDO($dsn, $username, $password, $options);
 
     $sql = "SELECT *
-    FROM users
-    WHERE location = :location";
+    FROM students
+    WHERE completed = 0";
 
-    $location = $_POST['location'];
+    $completed = $_POST['completed'];
 
     $statement = $connection->prepare($sql);
-    $statement->bindParam(':location', $location, PDO::PARAM_STR);
+    $statement->bindParam(':completed', $location, PDO::PARAM_STR);
     $statement->execute();
 
     $result = $statement->fetchAll();

@@ -9,5 +9,5 @@ CREATE DATABASE test;
     email VARCHAR(50) NOT NULL,
     age INT(3),
     location VARCHAR(50),
-    date TIMESTAMP
+    date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
   );

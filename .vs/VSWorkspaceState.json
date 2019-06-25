@@ -4,8 +4,9 @@
     "\\public",
     "\\public\\css",
     "\\public\\data",
+    "\\public\\old",
     "\\public\\templates"
   ],
-  "SelectedNode": "\\public\\read.php",
+  "SelectedNode": "\\public\\data\\init.sql",
   "PreviewInSolutionExplorer": false
 }

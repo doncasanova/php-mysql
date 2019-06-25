@@ -18,16 +18,13 @@ if (isset($_POST['submit'])) {
       "firstname" => $_POST['firstname'],
       "lastname"  => $_POST['lastname'],
       "email"     => $_POST['email'],
-	  "company"     => $_POST['company'],
-      "class"       => $_POST['class'],
-	  "completed" => 0,
-      "classStart"  => $_POST['classStart']
-	  
+      "age"       => $_POST['age'],
+      "location"  => $_POST['location']
     );
 
     $sql = sprintf(
 "INSERT INTO %s (%s) values (%s)",
-"students",
+"users",
 implode(", ", array_keys($new_user)),
 ":" . implode(", :", array_keys($new_user))
     );
@@ -47,7 +44,7 @@ implode(", ", array_keys($new_user)),
 <?php echo $_POST['firstname']; ?> was successfully added.
 <?php } ?>
 
-<h2>Add a student</h2>
+<h2>Add a user</h2>
 
 <form method="post">
   <label for="firstname">First Name</label>
@@ -56,12 +53,10 @@ implode(", ", array_keys($new_user)),
   <input type="text" name="lastname" id="lastname">
   <label for="email">Email Address</label>
   <input type="text" name="email" id="email">
-  <label for="company">Company</label>
-  <input type="text" name="company" id="company">
-  <label for="class">Class</label>
-  <input type="text" name="class" id="class">
-  <label for="classStart Date">Class Start Date</label>
-  <input type="date" name="classStart" id="classStart">
+  <label for="age">Age</label>
+  <input type="text" name="age" id="age">
+  <label for="location">Location</label>
+  <input type="text" name="location" id="location">
   <input type="submit" name="submit" value="Submit">
 </form>
 
